@@ -1,0 +1,39 @@
+print ("===============================================")
+print ("Get Down On The Ground And Show Me Your F.A.I.C")
+print ("        By: Quessian Phaedrus Sternabite       ")
+print ("===============================================")
+print ("\nHey You!!!")
+print ("\nMe?")
+print ("\nYeah! Get Down On The Ground, And Show Me Your F.A.I.C")
+print ("\n[1] Ok, Ok")
+print ("[2] No!")
+
+cmdlist = ['1', '2']
+cmd = getcmd(cmdlist)
+
+if cmd == '1':
+    print ("Good F.A.I.C")
+    print ("\nWhere are you going?")
+    print ("\n[1] The shipyard ")
+    print ("[2] The store")
+    print ("[3] Just home")
+    cmdlist = ['1', '2', '3']
+    cmd = getcmd(cmdlist)
+    if cmd == '1':
+        print ("\nOh cool whats your ship's name")
+        print ("\nShe's called the 'Bargerian Jade'")
+        print ("\nAlright.")
+        print ("Well, enjoy your day")
+    elif cmd == '2':
+        print ("\nOk, hope you don't get mugged...")
+        print ("\nwait what")
+        print ("\nEnjoy the store!")
+        print ("\n'Well that was strange.'")
+    else:
+        print ("invalid command")
+elif cmd == '2':
+    print("Lock and Loaded!!!")
+    print("*Whirrrrrrrr*")
+    print("GAME OVER")
+else:
+    print("invalid command")
