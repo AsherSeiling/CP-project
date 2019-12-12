@@ -1,244 +1,299 @@
 import time as t
+ID = input("Enter your ID ")
+print ("Begin")
+t.sleep(2)
 
 def getcmd(cmdlist):
-    cmd = input('QPS//')
+    cmd = input("cmd." + ID + "//")
     if cmd in cmdlist:
         return cmd
+    elif cmd == 'TERMI[null]':
+        print (" _______                  _   ___            _ _ ___"
+                "\n|__   __|                (_) |  _|          | | |_  |"
+                   "\n   | | ___ _ __ _ __ ___  _  | | _ __  _   _| | | | |"
+                   "\n   | |/ _ \ '__| '_ ` _ \| | | || '_ \| | | | | | | |"
+                   "\n   | |  __/ |  | | | | | | | | || | | | |_| | | | | |"
+                   "\n   |_|\___|_|  |_| |_| |_|_| | ||_| |_|\__,_|_|_|_| |"
+   "\n                             |___|              |___|")
+        print ("Termi[null] - a text adventure game from QPS")
+        print ("coming soon....")
+        return getcmd(cmdlist)
+    elif cmd == '66':
+        print ("you kill everyone around you, before being killed by them...")
+        print ("The End...")
+        print ("also, nice job with the secret cmd...")
     elif cmd == 'help':
         print ("type numbers 1-3 for each response")
         print ("and repeat to repeat the question ")
+        print ("and continue to restart the question")
         return getcmd(cmdlist)
     elif cmd == 'repeat':
         return getcmd(cmdlist)
     elif cmd == 'secret':
-        print ("------------------------------")
+        print ("==============================")
         print ("Thanks CP club for the support")
-        print ("  Game 2 still a possibility  ")
-        print ("         Self destruct        ")
-        print ("------------------------------")
-        t.exit()
+        print ("  Game 2 still a possibility!!")
+        print ("==============================")
+        return getcmd(cmdlist)
     else:
         print ("Invalid command, please type help")
         return getcmd(cmdlist)
+
 print ("===============================================")
 print ("Get Down On The Ground And Show Me Your F.A.I.C")
 print ("        By: Quessian Phaedrus Sternabite       ")
 print ("===============================================")
+t.sleep(1)
 print ("\nHey You!!!")
+t.sleep(1)
 print ("\nMe?")
+t.sleep(1)
 print ("\nYeah! Get Down On The Ground, And Show Me Your F.A.I.C")
+t.sleep(1)
 print ("\n[1] Ok, Ok")
 print ("[2] No!")
-cmdlist = ['1', '2']
+print ("[3] No, You get down on the Ground!!!")
+cmdlist = ['1', '2', '3']
 cmd = getcmd(cmdlist)
 if cmd == '1':
     print ("Good F.A.I.C")
     print ("Where are you going?")
-    t.sleep(.2)
     print ("\n[1] The shipyard ")
-    t.sleep(.2)
     print ("[2] The store")
-    t.sleep(.2)
     print ("[3] Just home")
-    t.sleep(.2)
     cmdlist = ['1', '2', '3']
     cmd = getcmd(cmdlist)
     if cmd == '1':
         print ("\nOh cool whats your ship's name")
-        t.sleep(.2)
         print ("\nShe's called the 'Bargerian Jade'")
-        t.sleep(.2)
         print ("\nAlright.")
         print ("Well, enjoy your day")
-        t.sleep(.2)
         print ("\n[1] go to ship")
-        t.sleep(.2)
         print ("[2] loiter in shipyard")
-        t.sleep(.2)
         print ("[3] buy a new ship")
         cmdlist = ['1', '2', '3']
         cmd = getcmd(cmdlist)
         if cmd == '1':
             print ("\nFeels good to be back")
-            t.sleep(.2)
             print ("\nHello!")
-            t.sleep(.2)
             print ("\nHey Bargie!")
-            t.sleep(.2)
             print ("\nWhere to?")
-            t.sleep(.2)
             print ("\nLet's go to a station")
-            t.sleep(.2)
             print ("........")
-            t.sleep(.2)
             print ("\n\nOn the station")
-            t.sleep(.2)
             print ("\nwelcome to t-")
-            t.sleep(.2)
             print ("\nALARM SOUND!!")
-            t.sleep(.2)
             print ("\nBOOOOOOOOM!")
-            t.sleep(.2)
             print ("\nHURRY!")
-            t.sleep(.2)
             print ("\nI'm TRYING!!")
-            t.sleep(.2)
             print ("\nchoose a driection")
-            t.sleep(.2)
             print ("[1] left")
-            t.sleep(.2)
             print ("[2] right")
             cmdlist = ['1', '2']
             cmd = getcmd(cmdlist)
             if cmd == '1':
                 print ("Whew, I made it!")
-                t.sleep(.2)
-                print ("......")
-                print ("The End...Restart for more EPIC endings")
+                print ("\n......")
+                print ("\nBack on the ship...")
+                print ("\nThe rebels nearly killed me!!")
+                print ("\n[1] They need to pay!")
+                print ("[2] Meh")
+                print ("[3] I'll destroy them... And the Federated Alliance!")
+                cmdlist = ['1', '2', '3']
+                cmd = getcmd(cmdlist)
+                if cmd == '1':
+                    print ("Bargie get me reinforcements!")
+                    print ("\n3 months later...")
+                    print ("\nEveryone, we have come here today"
+                           " because we have been harmed"
+                           " by the rebels, and will destroy them!")
+                    print ("\nALL HAIL THE FEDERATED ALLIANCE!!!")
+                    print ("The attack was successful, and ended with victory.")
+                    print ("The rebels were crushed... for now...")
+                    print ("The End...")
+                elif cmd == '2':
+                    print ("Oh well, FML.")
+                    print ("The End...")
+                elif cmd == '3':
+                    print ("\n3 years later...")
+                    print ("You've been taking down key leaders, prolonging the war, but now you finally destroy both the rebels and the FA")
+                    print ("The End...")
             elif cmd == '2':
                 print ("Bam!")
-                t.sleep(.2)
                 print ("AHHHHHHH!!!!")
                 print ("You're sucked into space.")
-                t.sleep(.2)
-                print ("GAME OVER")
-                t.sleep(.2)
-                print ("restart for more fun endings")
+                print ("\n......")
+                print ("\n\nwith 10 seconds left, you struggle for a door")
+                t.sleep(1)
+                print ("\n[1] Go for ship")
+                print ("[2] Go for space station")
+                cmdlist = ['1', '2']
+                cmd = getcmd(cmdlist)
+                if cmd == '1':
+                    print ("\nYou make it on the ship")
+                elif cmd == '2':
+                    print ("\nYou forgot the station was blown up!!!")
+                    print ("GAME OVER")
         elif cmd == '2':
             print ("\nYou loiter for 10 minutes")
-            t.sleep(.2)
             print ("\n[1] keep loitering")
-            t.sleep(.2)
             print ("[2] hitchhike")
             cmdlist = ['1', '2',]
             cmd = getcmd(cmdlist)
             if cmd == '1':
                 print ("nothing happens...")
-                t.sleep(.2)
                 print ("The end... Restart for more fun endings!")
             elif cmd == '2':
                 print ("\nExcuse me sir, do you have room on your ship for a...")
-                t.sleep(.2)
                 print ("\n[1] a scientist")
-                t.sleep(.2)
                 print ("[2] a warrior")
-                t.sleep(.2)
                 print ("[3] a pilot")
                 cmdlist = ['1', '2', '3']
                 cmd = getcmd(cmdlist)
                 if cmd == '1':
                     print ("Ok Sure")
-                    t.sleep(.2)
-                    print ("\n\nYou Live your life on the ship, and eventually help the rebellion after learning of an attack.")
-                    t.sleep(.2)
+                    print ("\n\nYou Live your life on the ship,"
+                           " and eventually help the rebellion after"
+                           " learning of a devastating attack.")
                     print ("The End... Restart for more fun endings")
                 elif cmd == '2':
                     print ("No, I already have a team of fighters")
-                    t.sleep(.2)
-                    print ("The End... Restart for more fun endings")
+                    print("\nBut-")
+                    print("\n[1] Kill him")
+                    print("[2] leave")
+                    cmdlist = ['1', '2']
+                    cmd = getcmd(cmdlist)
+                    if cmd == '1':
+                        print("you get a reward,"
+                              " as this man was wanted,"
+                              " and you were paid enough to buy a ship.")
+                        print("\n[1] Buy ship")
+                        print("[2] Retire")
+                        print("[3] Keep bounty hunting")
+                        cmdlist = ['1', '2', '3']
+                        cmd = getcmd(cmdlist)
+                        if cmd == '1':
+                            print("You buy a ship,"
+                                  " and travel the galaxy for the rest of your life, "
+                                  "as your old one was destroyed in an accident")
+                            print("The End")
+                        elif cmd == '2':
+                            print("You retire and live a peaceful life.")
+                            print("\nThe End...")
+                        elif cmd == '3':
+                            print("You become a bounty hunter by the name of Fubba' Bett")
+                            print("\n\n3 years later...")
+                            print("\n\nYou finally retire after taking down many "
+                                  "Rebellion and FA leaders,"
+                                  " but once the war ended,"
+                                  "you were left jobless.")
+                            print("The End...")
+                    elif cmd == '2':
+                        print("\nOh well")
+                        print("The End...")
                 elif cmd == '3':
                     print ("No, I have some pilots")
-                    t.sleep(.2)
-                    print("The End... Restart for more fun endings")
+                    print("\nBut-")
+                    print ("\n[1] Kill him")
+                    print ("[2] leave")
+                    cmdlist = ['1', '2']
+                    cmd = getcmd(cmdlist)
+                    if cmd == '1':
+                        print ("you get a reward,"
+                               " as this man was wanted,"
+                               " and you were paid enough to buy a ship.")
+                        print ("\n[1] Buy ship")
+                        print ("[2] Retire")
+                        print ("[3] Keep bounty hunting")
+                        cmdlist = ['1','2','3']
+                        cmd = getcmd(cmdlist)
+                        if cmd == '1':
+                            print ("You buy a ship,"
+                                   " and travel the galaxy for the rest of your life, "
+                                   "as your old one was destroyed in an accident")
+                            print ("The End")
+                        elif cmd == '2':
+                            print ("You retire and live a peaceful life.")
+                            print ("\nThe End...")
+                        elif cmd == '3':
+                            print ("You become a bounty hunter by the name of Fubba' Bett")
+                            print ("\n\n3 years later...")
+                            print ("\n\nYou finally retire after taking down many "
+                                   "Rebellion and FA leaders,"
+                                   " but once the war ended,"
+                                   "you were left jobless.")
+                            print ("The End...")
+                    elif cmd == '2':
+                        print ("\nOh well")
+                        print ("The End...")
         elif cmd == '3':
-            print ("You're too poor, and die saving up.")
-            t.sleep(.2)
+            print ("You're old ship was destroyed in an accident so you try to buy a new one but")
+            print ("you're too poor, and die saving up.")
             print ("The End... Restart for more endings")
     elif cmd == '2':
         print ("\nOk, hope you don't get mugged...")
-        t.sleep(.2)
         print ("\nwait what")
-        t.sleep(.2)
         print ("\nEnjoy the store!")
-        t.sleep(.2)
         print ("\n'Well that was strange.'")
-        t.sleep(.2)
         print ("\n[1] Go through dark alley")
-        t.sleep(.2)
         print ("[2] Go through brightly lit street")
-        t.sleep(.2)
         cmdlist = ['1', '2']
         cmd = getcmd(cmdlist)
         if cmd == '1':
             print ("\n\nYou arrive at the store, all safe.")
-            t.sleep(.2)
-            print ("\nLater, you learn about a failed rebel attack...")
-            t.sleep(.2)
-            print ("The End... Restart for more fun endings")
+            print ("\nLater, you see the guard waiting on the street, trying to mug someone")
+            print ("[1] I knew that guard was up to something!!!")
+            print ("")
         elif cmd == '2':
             print ("\nBam!!!")
-            t.sleep(.2)
             print ("\nYou're getting mugged!")
-            t.sleep(.2)
             print ("\nI knew that soldier was up to something!")
-            t.sleep(.2)
             print ("*Whirrrrrrrr*")
-            t.sleep(.2)
             print ("GAME OVER")
     elif cmd == '3':
         print ("\nHmmmmm")
         print ("Well you have a good day")
-        t.sleep(.2)
         print ("\nAlright")
-        t.sleep(.2)
         print ("\n[1] Go home")
-        t.sleep(.2)
         print ("[2] Go to ship")
         cmdlist = ['1', '2']
         cmd = getcmd(cmdlist)
         if cmd == '1':
             print ("You make it home, and go to bed.")
-            t.sleep(.2)
             print ("\n\nThe Next Day...")
-            t.sleep(.2)
             print ("\n\n*YAWN!*")
-            t.sleep(.2)
             print ("Woah, where am I")
-            t.sleep(.2)
             print ("\nWelcome to rebellion HQ")
             print ("we need your help to liberate a station.")
             print ("It will be dangerous, but we need your skills with computers")
             print ("\n[1] I'll do it")
-            t.sleep(.2)
             print ("[2] No thanks")
-            t.sleep(.2)
             print ("[3] STRANGER DANGER!!!, STRANGER DANGER!!!")
             cmdlist = ['1','2','3']
             cmd = getcmd(cmdlist)
             if cmd == '1':
                 print ("Sweet")
-                t.sleep(.2)
                 print ("\n\n 3 months later...")
-                t.sleep(.2)
                 print ("\nalright guys, I'm going in")
-                t.sleep(.2)
                 print ("\nGet ready")
                 print ("Choose a direction")
-                t.sleep(.2)
                 print ("\n[1] left")
-                t.sleep(.2)
                 print ("[2] right")
-                t.sleep(.2)
                 print ("[3] straight")
                 cmdlist = ['1','2','3']
                 cmd = getcmd(cmdlist)
                 if cmd == '1':
                     print ("Correct!")
                     print ("Choose a direction")
-                    t.sleep(.2)
                     print ("\n[1] Right")
-                    t.sleep(.2)
                     print ("[2] straight")
-                    t.sleep(.2)
                     print ("[3] left")
                     cmdlist = ['1', '2', '3']
                     cmd = getcmd(cmdlist)
                     if cmd == '1':
                         print ("Correct!")
                         print ("\nHere we go!!!")
-                        t.sleep(.2)
                         print ("\n\n3 years later")
-                        t.sleep(.2)
                         print ("\nThe Station was destroyed, and the rebels won "
                                "the war, whilst you were seen as a hero")
                     elif cmd == '2':
@@ -255,9 +310,7 @@ if cmd == '1':
                     print ("GAME OVER")
             elif cmd == '2':
                 print ("Alright, suit yourself")
-                t.sleep(.2)
                 print ("\n\n*3 Years later...")
-                t.sleep(.2)
                 print ("\nThe rebels failed, and were wiped out.")
                 print ("The soldiers spread, and became so invasive that you moved to the distant planet of eniotat")
                 print ("A raid by wajas killed you in your family after two years,"
@@ -266,24 +319,175 @@ if cmd == '1':
                 print ("for now...")
             elif cmd == '3':
                 print ("Crap! He can't be trusted")
-                t.sleep(.2)
                 print ("*Thump-Thump-Thump")
-                t.sleep(.2)
                 print ("\nAUGGGGGGH!!!")
                 print ("GAME OVER")
         elif cmd == '2':
             print ("Hey you! You said you were going home!")
             print ("That means you're a rebel spy!!!")
-            t.sleep(.2)
             print ("\nWhat? That Doesn't me-")
-            t.sleep(.2)
             print("\nLock and Loaded!!!")
-            t.sleep(.2)
             print ("\nNo! Wa-")
-            t.sleep(.2)
             print("*Whirrrrrrrr*")
             print("GAME OVER")
+
 elif cmd == '2':
     print("Lock and Loaded!!!")
     print("*Whirrrrrrrr*")
     print("GAME OVER")
+
+elif cmd == '3':
+    print ("Guard: OK, Ok I'm on the ground!!!")
+    print ("Here's my FAIC")
+    print ("\nGood FAIC, Good FAIC.")
+    print ("\nCan I go home?")
+    print ("\nYes you may officer.")
+    print ("He turns around, and walks away")
+    print ("\n[1] Go home")
+    print ("[2] Go to pet store")
+    print ("[3] follow the guard")
+    print ("[4] Go to ship")
+    print ("[5] Join the rebellion with the stolen data.")
+
+    cmdlist = ['1', '2', '3', '4', '5']
+    cmd = getcmd(cmdlist)
+
+    if cmd == '1':
+        print ("You turn around and start walking home...")
+        print ("\n3 hours later...")
+        print ("\nAlright, I'm home.")
+        print ("what should I do?")
+        print ("\n[1] Go to the gym")
+        print ("[2] join the Federated Alliance")
+        print ("[3] Eat all the food you own.")
+
+        cmdlist = ['1', '2', '3']
+        cmd = getcmd(cmdlist)
+
+    elif cmd == '2':
+        print ("You walk to X)PETZZZ!!(X, your local family-owned pet store.")
+        print ("\nHello? Anyone here?")
+        print ("\nHello dear welcome to X)PETZZZ!!(X, what are you looking for")
+        print ("\n[1] a dog")
+        print ("[2] a cat")
+        print ("[3] a bird")
+        cmdlist = ['1', '2', '3']
+        cmd = getcmd(cmdlist)
+        if cmd == '1':
+            print ("good choice!")
+            print ("\nYou see her put down a blaster")
+            print ("\n[1] ask her about the blaster")
+            print ("[2] go on space adventures with your dog")
+        elif cmd == '2' or '3':
+            print ("alright then!")
+            print ("she pulls out a blaster.")
+            print ("DOGS ARE THE BEST!!!!!")
+            print ("*Whirrrrrrrr*")
+            print("GAME OVER")
+    elif cmd == '3':
+        print ("You follow the guard, and see him go "
+               "into the room of the council of seven,"
+               " where the council of syxx is having a meeting")
+        print ("[1] listen in")
+        print ("[2] walk away")
+        if cmd == '1':
+            print ()
+        elif cmd == '2':
+            print ("Hey, what are you doing here?")
+            print ("\nJust walking ar-")
+            print ("\nBANG!!")
+            print ("\nYou fall to the floor, dead...")
+            print ("GAME OVER")
+    elif cmd == '4':
+        print ("You get on the ship, and meet up with your partners Dar and C-53")
+        print ("\nWhat's up "+ ID +"?")
+        print ("\nNothing much..")
+        print ("\nIT WOULD SEEM "+ ID +" IS FEELING TRIUMPHANT")
+        print ("\nYep! I tricked a C.L.I.N.T.")
+        print ("\n"+ ID +", I HAVE AN INCOMING TRANSMISSION FROM MASTER MISSION OPERATIONS MANAGER NERMIT BUNDALOY")
+        print ("[1] Accept")
+        print ("[2] Deny")
+        cmdlist = ['1', '2']
+        cmd = getcmd(cmdlist)
+        if cmd == '1':
+            print ("Hey Nermit What's up?")
+            print ("\nNothing much, just chillin.")
+            print ("\nDO YOU HAVE A MISSION?")
+            print ("\nYou can either go to the salt moons of Lagmorm (1),"
+                   " or cheesequake, a planet made of cheese (2)")
+            cmdlist = ['1', '2']
+            cmd = getcmd(cmdlist)
+            if cmd == '1':
+                print ("\n3 days later")
+                print ("Ok "+ ID +",here we are!")
+                print ("\nWhere's C-53?")
+                print ("He's back on the ship gathering supplies.")
+                print ("\n[1] Go to the mountain")
+                print ("[2] Go into the valley")
+                cmdlist = ['1', '2']
+                cmd = getcmd(cmdlist)
+                if cmd == '1':
+                    print ("You go to the mountains, and find a strange cave at nightfall.")
+                    print ("Should we go in?")
+                    print ("\n[1] Yes!")
+                    print ("[2] NO!")
+                    cmdlist = ['1', '2']
+                    if cmd == '1':
+                        print ("You go into the cave, and never come out.....")
+                        print ("GAME OVER")
+                    elif cmd == '2':
+                        print ("you avoid the cave, and instead build a treehouse to sleep in.")
+                        print ("In the morning, you find bones near the cave...")
+                        print ("[1] Go in")
+                        print ("[2] Go back to your treehouse.")
+                        cmdlist = ['1', '2']
+                        cmd = getcmd(cmdlist)
+                        if cmd == '1':
+                            print ("You go into the cave, and never come out.....")
+                            print ("GAME OVER")
+                        elif cmd == '2':
+                            print ("Once in your treehouse, you see a strange man, who offers you a cracker")
+                            print ("[1] eat the cracker")
+                            cmdlist = ['1', 'offer him a cracker']
+                            if cmd == '1':
+                                print ("the cracker is poisoned, you die.")
+                                print ("GAME OVER")
+                            if cmd == 'offer him a cracker':
+                                print ("YOU WIN!!!")
+                                print ("Good Game.")
+                    cmd = getcmd(cmdlist)
+                elif cmd == '2':
+                    print ("In the valley, you find a city, with many creatures.")
+                    print ("After 2 days of negotiation, you secured a source of food for your rebellion.")
+                    print ("The End...")
+        elif cmd == '2':
+            print ("Nope!")
+            print ("You live the rest of your days with your crew... The End...")
+    elif cmd == '5':
+        print ("You walk towards rebellion HQ")
+        print ("Once there, you walk up and slide the secret data into a slot on the door")
+        print ("HELLO " + ID + ". Please enter")
+        print ("\n[1] enter")
+        print ("[2] leave")
+        cmdlist = ['1', '2']
+        cmd = getcmd(cmdlist)
+        if cmd == '1':
+            print ("Welcome")
+            print ("You see Hark tardigast and Sisdu Gundu reading the data.")
+            print ("\nWith this we can shut down the CLINTS!")
+            print ("\n\n2 days later....")
+            print ("\n[1] shut down cloning facility")
+            print ("[2] leave")
+            cmdlist = ['1', '2']
+            cmd = getcmd(cmdlist)
+            if cmd == '1':
+                print ("You shut down the facility, and cause the FA great damage.")
+                print ("THE END...")
+            elif cmd == '2':
+                print("There he is!!!")
+                print("GAME OVER")
+        elif cmd == '2':
+            print ("You leave, and immediately get hit by a dart.")
+            print ("The chemicals in the dart cause you to stumble into the street where you are hit by a bus.")#
+            print ("\nAw F-")
+            print ("\nBANG!!!")
