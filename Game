@@ -460,6 +460,7 @@ elif cmd == '3':
                     print ("In the valley, you find a city, with many creatures.")
                     print ("After 2 days of negotiation, you secured a source of food for your rebellion.")
                     print ("The End...")
+  
         elif cmd == '2':
             print ("Nope!")
             print ("You live the rest of your days with your crew... The End...")
